@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #535bcb, #6A74FF);
+}
+
+::selection {
+  color: #fff;
+  background: #4D59FB;
+}
+
+.wrapper {
+  width: 420px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 25px 28px 45px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+.wrapper:hover {
+  transform: translateY(-2px);
+}
+.wrapper header {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+.wrapper .search {
+  position: relative;
+  margin: 35px 0 18px;
+}
+.search input {
+  height: 53px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 0 42px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+.search input:focus {
+  border: 2px solid #4D59FB;
+}
+.search input::placeholder {
+  color: #B8B8B8;
+}
+.search i,
+.search span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+.search i {
+  left: 18px;
+  pointer-events: none;
+  font-size: 16px;
+}
+.search input:focus ~ i {
+  color: #4D59FB;
+}
+.search span {
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+}
+.search input:valid ~ span {
+  display: block;
+}
+
+.wrapper .info-text {
+  font-size: 13px;
+  color: #9A9A9A;
+  margin: -3px 0 -10px;
+}
+.wrapper.active .info-text {
+  display: none;
+}
+.info-text span {
+  font-weight: 500;
+}
+
+.wrapper ul {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.wrapper.active ul {
+  opacity: 1;
+  height: auto;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.wrapper ul li {
+  display: flex;
+  list-style: none;
+  margin-bottom: 14px;
+  align-items: center;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #D9D9D9;
+  justify-content: space-between;
+}
+ul li:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+ul .word p {
+  font-size: 22px;
+  font-weight: 500;
+}
+ul .word span {
+  font-size: 12px;
+  color: #989898;
+}
+ul .word i {
+  color: #999;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+ul .word i:hover {
+  color: #4D59FB;
+}
+
+ul .details p {
+  font-size: 17px;
+  font-weight: 500;
+}
+ul .details span {
+  font-size: 15px;
+  color: #7E7E7E;
+}
+
+.synonyms .list,
+.antonyms .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.synonyms .list span,
+.antonyms .list span {
+  display: inline-block;
+  margin: 4px 6px 0 0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 1px solid #d6dbff;
+  cursor: pointer;
+  user-select: none;
+}
+.synonyms .list span:hover {
+  background: #eef0ff;
+  color: #2b37c9;
+}
+.antonyms .list span:hover {
+  background: #ffecec;
+  color: #c92b2b;
+}

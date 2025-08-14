@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Dictionary App</title>
+  <link rel="stylesheet" href="project.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <header>English Dictionary</header>
+    
+    <div class="search">
+      <input type="text" placeholder="Search a word" required spellcheck="false">
+      <i class="fas fa-search"></i>
+      <span class="material-icons">close</span>
+    </div>
+    
+    <p class="info-text">
+      Type any existing word and press enter to get meaning, example, synonyms, etc.
+    </p>
+    
+    <ul>
+      <!-- Word and pronunciation -->
+      <li class="word">
+        <div class="details">
+          <p>__</p>
+          <span>__</span>
+        </div>
+        <i class="fas fa-volume-up"></i>
+      </li>
+      
+      <!-- Meaning -->
+      <li class="meaning">
+        <div class="details">
+          <p>Meaning</p>
+          <span>__</span>
+        </div>
+      </li>
+      
+      <!-- Example -->
+      <li class="example">
+        <div class="details">
+          <p>Example</p>
+          <span>__</span>
+        </div>
+      </li>
+      
+      <!-- Synonyms -->
+      <li class="synonyms">
+        <div class="details">
+          <p>Synonyms</p>
+          <div class="list"></div>
+        </div>
+      </li>
+
+      <!-- Antonyms -->
+      <li class="antonyms">
+        <div class="details">
+          <p>Antonyms</p>
+          <div class="list"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <script src="project.js"></script>
+</body>
+</html>
